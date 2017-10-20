@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication2
 {
-    class CustomList
+    public class CustomList<T>
     {
         //member variables
 
@@ -17,6 +17,12 @@ namespace ConsoleApplication2
         }
 
         //member methods
+        
+        public void add()
+        {
+
+        }
+
 
     }
 }

@@ -10,6 +10,7 @@ namespace ConsoleApplication2
     {
         static void Main(string[] args)
         {
+            List<string> foo = new List<string>()
         }
     }
 }
