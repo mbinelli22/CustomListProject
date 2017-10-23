@@ -10,16 +10,28 @@ namespace ConsoleApplication2
     {
         //member variables
 
+        T value;
+        int[] array;
+        
+
         //constructor
-        public CustomList()
+        public CustomList(T value)
         {
-            
+            this.value = value;
+            int[] array = new int[5];
+
+                
         }
 
         //member methods
         
-        public void add()
+        public void Add<T>(T value, int[] array)
         {
+            int[] array = new int[5];
+            for(int runs = 0; runs < 5; runs++)
+            {
+                array[runs] = value;
+            }
 
         }
 

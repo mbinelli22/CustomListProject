@@ -8,10 +8,11 @@ namespace CustomListTest
     [TestClass]
     public class UnitTest1
     {
+        
         [TestMethod]
         public void TestMethod1()
         {
-            //CustomList myList = new ConsoleApplication2.CustomList();
+
         }
 
         [TestMethod]
@@ -23,7 +24,8 @@ namespace CustomListTest
             int firstNumber = 5;
            
             //Assert
-            customList.add(firstNumber);
+            customList.Add(firstNumber);
+            // .Add
 
             //Act
             Assert.AreEqual(5, customList[0]);
@@ -39,7 +41,7 @@ namespace CustomListTest
 
 
             //Assert
-            customList.add(firstString);
+            customList.Add(firstString);
 
             //Act
             Assert.AreEqual(firstString, customList[0]);
@@ -54,7 +56,7 @@ namespace CustomListTest
             bool firstBool = true;
 
             //Assert
-            customList.add(firstBool);
+            customList.Add(firstBool);
 
             //Act
             Assert.AreEqual(firstBool, customList[0]);
@@ -71,7 +73,7 @@ namespace CustomListTest
 
             //Assert
             customList.add(firstInt);
-            customList.add(secondInt);
+            customList.Add(secondInt);
 
             //Act
             Assert.AreEqual(secondInt, customList[1]);
@@ -82,16 +84,47 @@ namespace CustomListTest
         public void addList()
         {
             //Arrange
-            public List<newList> secondList;
-            CustomList<> customList = new CustomList<newCustomList>();
-            
-
+            CustomList<int> newCustomList = new CustomList<int>();
+            CustomList<CustomList<int>> customList = new CustomList<CustomList<int>>();
+                        
+            //Act
+            customList.Add(newCustomList);
 
             //Assert
-            customList.add(newCustomList);
+            Assert.AreEqual(newCustomList, customList[0]);
+
+        }
+
+
+        //remove
+
+        [TestMethod]
+        public void removeInt()
+        {
+            //Arrange
+            CustomList<int> customList = new CustomList<int>();
+            int zeroIndex = customList[0];
 
             //Act
-            Assert.AreEqual(newCustomList, customList[0]);
+            customList.Add(zeroIndex);
+
+            //Assert
+            Assert.AreEqual(null, customList[0]);
+
+        }
+
+        [TestMethod]
+        public void removeString()
+        {
+            //Arrange
+            CustomList<string> customList = new CustomList<string>();
+            string zeroIndex = customList[0];
+
+            //Act
+            customList.Add(zeroIndex);
+
+            //Assert
+            Assert.AreEqual(null, customList[0]);
 
         }
     }
