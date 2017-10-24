@@ -10,31 +10,97 @@ namespace ConsoleApplication2
     {
         //member variables
 
-        T value;
-        int[] array;
-        
+        T[] data;
+        int count;
+        int capacity;
 
         //constructor
-        public CustomList(T value)
+        public CustomList()
         {
-            this.value = value;
-            int[] array = new int[5];
+            this.capacity = 5;
+            this.data = new T[capacity];
+            this.count = 0;
 
-                
         }
 
         //member methods
-        
-        public void Add<T>(T value, int[] array)
+
+        public T this[int i]
         {
-            int[] array = new int[5];
-            for(int runs = 0; runs < 5; runs++)
+            get { return data[i]; }
+            set { data[i] = value; }
+        }
+
+        public void Add(T value)
+        {
+            //Check to make sure that you have room in your array for the new item
+            //If you dont have enough room, call another method (that you have to write) that creates a new array (temp) of double the size of the existing one
+            //then transfer the data from the old array to the new array. 
+            // set data = to the new array
+            //If or once you have room, add the new item to the array
+            bool isTrueOrFalse = IsCapacityGreaterThanCount();
+
+            if (isTrueOrFalse)
             {
-                array[runs] = value;
+                T[] tempData = new T[capacity];
+
+                for (int i = 0; i <= count; i++)
+                {
+                    tempData[i] = data[i];
+                }
+
+                data = tempData;
+            }
+            data[count] = value;
+
+            count++;                  
+
+        }
+
+        private bool IsCapacityGreaterThanCount()
+        {
+            if (count > capacity)
+            {
+                ExpandArray();
+                return true;
+                
+            }
+            else
+            {
+                return false;
             }
 
         }
 
 
+        public void ExpandArray()
+        {
+            capacity *= 2;            
+        }
+
+        //public void Remove()
+        //{
+        //    for ()
+        //    {
+        //        if ()//array has value im looking for return true, have other values slide down
+        //        {
+
+        //        }
+        //        else
+        //        {
+        //            //return false
+        //        }
+        //    }
+        //}
+
+
+
+
+
+
+
+
+
     }
 }
+

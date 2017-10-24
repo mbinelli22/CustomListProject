@@ -1,1 +1,6 @@
 C:\Users\Michael\OneDrive\DevCodeCamp\C#\CustomListProject\ConsoleApplication2\bin\Debug\ConsoleApplication2.exe.config
+C:\Users\Michael\OneDrive\DevCodeCamp\C#\CustomListProject\ConsoleApplication2\obj\Debug\CustomListProject.csprojResolveAssemblyReference.cache
+C:\Users\Michael\OneDrive\DevCodeCamp\C#\CustomListProject\ConsoleApplication2\bin\Debug\ConsoleApplication2.exe
+C:\Users\Michael\OneDrive\DevCodeCamp\C#\CustomListProject\ConsoleApplication2\bin\Debug\ConsoleApplication2.pdb
+C:\Users\Michael\OneDrive\DevCodeCamp\C#\CustomListProject\ConsoleApplication2\obj\Debug\ConsoleApplication2.exe
+C:\Users\Michael\OneDrive\DevCodeCamp\C#\CustomListProject\ConsoleApplication2\obj\Debug\ConsoleApplication2.pdb

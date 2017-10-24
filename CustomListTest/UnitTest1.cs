@@ -10,13 +10,7 @@ namespace CustomListTest
     {
         
         [TestMethod]
-        public void TestMethod1()
-        {
-
-        }
-
-        [TestMethod]
-        public void addInt()
+        public void Add_AddSpecifiedIntToArray()
         {
             //Arrange
             CustomList<int> customList = new CustomList<int>();
@@ -33,7 +27,7 @@ namespace CustomListTest
         }
  
         [TestMethod]
-        public void addstring()
+        public void Add_AddSpecifiedStringToArray()
         {
             //Arrange
             CustomList<string> customList = new CustomList<string>();
@@ -49,7 +43,7 @@ namespace CustomListTest
         }
 
         [TestMethod]
-        public void addBool()
+        public void Add_AddSpecifiedBoolToArray()
         {
             //Arrange
             CustomList<bool> customList = new CustomList<bool>();
@@ -64,7 +58,7 @@ namespace CustomListTest
         }
 
         [TestMethod]
-        public void addTwoNumbers()
+        public void Add_AddTwoNumbersToArray()
         {
             //Arrange
             CustomList<int> customList = new CustomList<int>();
@@ -72,7 +66,7 @@ namespace CustomListTest
             int secondInt = 6;
 
             //Assert
-            customList.add(firstInt);
+            customList.Add(firstInt);
             customList.Add(secondInt);
 
             //Act
@@ -81,7 +75,7 @@ namespace CustomListTest
         }
 
         [TestMethod]
-        public void addList()
+        public void Add_AddANewListToArray()
         {
             //Arrange
             CustomList<int> newCustomList = new CustomList<int>();
@@ -96,36 +90,79 @@ namespace CustomListTest
         }
 
 
-        //remove
+        //REMOVE
 
-        [TestMethod]
-        public void removeInt()
-        {
-            //Arrange
-            CustomList<int> customList = new CustomList<int>();
-            int zeroIndex = customList[0];
+        //[TestMethod]
+        //public void Remove_RemoveSpecifiedIntFromArray()
+        //{
+        //    //Arrange
+        //    CustomList<int> customList = new CustomList<int>();
+        //    int removeZeroIndex = customList[0];
 
-            //Act
-            customList.Add(zeroIndex);
+        //    //Act
+        //    customList.Remove(removeZeroIndex);
 
-            //Assert
-            Assert.AreEqual(null, customList[0]);
+        //    //Assert
+        //    Assert.AreEqual(null, customList[0]);
 
-        }
+        //}
 
-        [TestMethod]
-        public void removeString()
-        {
-            //Arrange
-            CustomList<string> customList = new CustomList<string>();
-            string zeroIndex = customList[0];
+        //[TestMethod]
+        //public void Remove_RemoveSpecifiedStringFromArray()
+        //{
+        //    //Arrange
+        //    CustomList<string> customList = new CustomList<string>();
+        //    string zeroIndex = customList[0];
 
-            //Act
-            customList.Add(zeroIndex);
+        //    //Act
+        //    customList.Remove(zeroIndex);
 
-            //Assert
-            Assert.AreEqual(null, customList[0]);
+        //    //Assert
+        //    Assert.AreEqual(null, customList[0]);
 
-        }
+        //}
+
+        //public void Remove_RemoveSpecifiedBoolFromArray()
+        //{
+        //    //Arrange
+        //    CustomList<bool> customList = new CustomList<bool>();
+        //    bool zeroIndex = customList[0];
+
+        //    //Act
+        //    customList.Remove(zeroIndex);
+
+        //    //Assert
+        //    Assert.AreEqual(null, customList[0]);
+
+        //}
+
+        //public void Remove_RemoveTwoIntsFromArray()
+        //{
+        //    //Arrange
+        //    CustomList<int> customList = new CustomList<int>();
+        //    int firstInt = customList[0];
+        //    int secondInt = customList[1];
+
+        //    //Act
+        //    customList.Remove(firstInt);
+        //    customList.Remove(secondInt);
+
+        //    //Assert
+        //    Assert.AreEqual(null, customList[1]);
+        //}
+
+        //public void Remove_RemoveListFromArray()
+        //{
+        //    //Arrange
+        //    CustomList<int> newCustomList = new CustomList<int>();
+        //    CustomList<CustomList<int>> customList = new CustomList<CustomList<int>>();
+
+        //    //Act
+        //    customList.Remove(newCustomList);
+
+        //    //Assert
+        //    Assert.AreEqual(null, customList[0]);
+
+        //}
     }
 }
