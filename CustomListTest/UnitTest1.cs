@@ -92,77 +92,89 @@ namespace CustomListTest
 
         //REMOVE
 
-        //[TestMethod]
-        //public void Remove_RemoveSpecifiedIntFromArray()
-        //{
-        //    //Arrange
-        //    CustomList<int> customList = new CustomList<int>();
-        //    int removeZeroIndex = customList[0];
+        [TestMethod]
+        public void Remove_RemoveSpecifiedIntFromArray()
+        {
+            //Arrange
+            CustomList<int> customList = new CustomList<int>();
+            int expectedValue = 0;
+            
 
-        //    //Act
-        //    customList.Remove(removeZeroIndex);
+            //Act
+            customList.Add(5);
+            customList.Remove(5);
+            int actualValue = customList.Count;
+            
+            //Assert
+            Assert.AreEqual(actualValue, expectedValue);
+        }
 
-        //    //Assert
-        //    Assert.AreEqual(null, customList[0]);
+        [TestMethod]
+        public void Remove_RemoveSpecifiedStringFromArray()
+        {
+            //Arrange
+            CustomList<string> customList = new CustomList<string>();
+            int expectedValue = 0;
 
-        //}
+            //Act
+            customList.Add("yoda");
+            customList.Remove("yoda");
+            int actualValue = customList.Count;
 
-        //[TestMethod]
-        //public void Remove_RemoveSpecifiedStringFromArray()
-        //{
-        //    //Arrange
-        //    CustomList<string> customList = new CustomList<string>();
-        //    string zeroIndex = customList[0];
+            //Assert
+            Assert.AreEqual(actualValue, expectedValue);
 
-        //    //Act
-        //    customList.Remove(zeroIndex);
+        }
 
-        //    //Assert
-        //    Assert.AreEqual(null, customList[0]);
+        public void Remove_RemoveSpecifiedBoolFromArray()
+        {
+            //Arrange
+            CustomList<bool> customList = new CustomList<bool>();
+            int expectedValue = 0;
 
-        //}
+            //Act
+            customList.Add(true);
+            customList.Remove(true);
+            int actualValue = customList.Count;
 
-        //public void Remove_RemoveSpecifiedBoolFromArray()
-        //{
-        //    //Arrange
-        //    CustomList<bool> customList = new CustomList<bool>();
-        //    bool zeroIndex = customList[0];
+            //Assert
+            Assert.AreEqual(actualValue, expectedValue);
 
-        //    //Act
-        //    customList.Remove(zeroIndex);
+        }
 
-        //    //Assert
-        //    Assert.AreEqual(null, customList[0]);
+        public void Remove_RemoveTwoIntsFromArray()
+        {
+            //Arrange
+            CustomList<int> customList = new CustomList<int>();
+            int expectedValue = 0;
 
-        //}
 
-        //public void Remove_RemoveTwoIntsFromArray()
-        //{
-        //    //Arrange
-        //    CustomList<int> customList = new CustomList<int>();
-        //    int firstInt = customList[0];
-        //    int secondInt = customList[1];
+            //Act
+            customList.Add(8);
+            customList.Add(2);
+            customList.Remove(8);
+            customList.Remove(2);
+            int actualValue = customList.Count;
 
-        //    //Act
-        //    customList.Remove(firstInt);
-        //    customList.Remove(secondInt);
+            //Assert
+            Assert.AreEqual(actualValue, expectedValue);
+        }
 
-        //    //Assert
-        //    Assert.AreEqual(null, customList[1]);
-        //}
+        public void Remove_RemoveListFromArray()
+        {
+            //Arrange
+            CustomList<int> newCustomList = new CustomList<int>();
+            CustomList<CustomList<int>> customList = new CustomList<CustomList<int>>();
+            int expectedValue = 0;
 
-        //public void Remove_RemoveListFromArray()
-        //{
-        //    //Arrange
-        //    CustomList<int> newCustomList = new CustomList<int>();
-        //    CustomList<CustomList<int>> customList = new CustomList<CustomList<int>>();
+            //Act
+            customList.Add(newCustomList);
+            customList.Remove(newCustomList);
+            int actualValue = customList.Count;
 
-        //    //Act
-        //    customList.Remove(newCustomList);
+            //Assert
+            Assert.AreEqual(actualValue, expectedValue);
 
-        //    //Assert
-        //    Assert.AreEqual(null, customList[0]);
-
-        //}
+        }
     }
 }

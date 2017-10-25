@@ -11,7 +11,7 @@ namespace ConsoleApplication2
         //member variables
 
         T[] data;
-        int count;
+        public int Count;
         int capacity;
 
         //constructor
@@ -19,7 +19,7 @@ namespace ConsoleApplication2
         {
             this.capacity = 5;
             this.data = new T[capacity];
-            this.count = 0;
+            this.Count = 0;
 
         }
 
@@ -31,35 +31,35 @@ namespace ConsoleApplication2
             set { data[i] = value; }
         }
 
+        public MyList()
+        {
+            data = new T[Count];
+        }
+
         public void Add(T value)
         {
-            //Check to make sure that you have room in your array for the new item
-            //If you dont have enough room, call another method (that you have to write) that creates a new array (temp) of double the size of the existing one
-            //then transfer the data from the old array to the new array. 
-            // set data = to the new array
-            //If or once you have room, add the new item to the array
             bool isTrueOrFalse = IsCapacityGreaterThanCount();
 
             if (isTrueOrFalse)
             {
                 T[] tempData = new T[capacity];
 
-                for (int i = 0; i <= count; i++)
+                for (int i = 0; i <= Count; i++)
                 {
                     tempData[i] = data[i];
                 }
 
                 data = tempData;
             }
-            data[count] = value;
+            data[Count] = value;
 
-            count++;                  
+            Count++;                  
 
         }
 
         private bool IsCapacityGreaterThanCount()
         {
-            if (count > capacity)
+            if (Count > capacity)
             {
                 ExpandArray();
                 return true;
@@ -71,27 +71,26 @@ namespace ConsoleApplication2
             }
 
         }
-
-
+        
         public void ExpandArray()
         {
             capacity *= 2;            
         }
 
-        //public void Remove()
-        //{
-        //    for ()
-        //    {
-        //        if ()//array has value im looking for return true, have other values slide down
-        //        {
+        public void Remove(T value)
+        {
+            for ()
+            {
+                if ()//array has value im looking for return true, have other values slide down
+                {
 
-        //        }
-        //        else
-        //        {
-        //            //return false
-        //        }
-        //    }
-        //}
+                }
+                else
+                {
+                    //return false
+                }
+            }
+        }
 
 
 
