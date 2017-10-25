@@ -126,6 +126,7 @@ namespace CustomListTest
 
         }
 
+        [TestMethod]
         public void Remove_RemoveSpecifiedBoolFromArray()
         {
             //Arrange
@@ -142,6 +143,7 @@ namespace CustomListTest
 
         }
 
+        [TestMethod]
         public void Remove_RemoveTwoIntsFromArray()
         {
             //Arrange
@@ -159,6 +161,7 @@ namespace CustomListTest
             Assert.AreEqual(actualValue, expectedValue);
         }
 
+        [TestMethod]
         public void Remove_RemoveListFromArray()
         {
             //Arrange
@@ -176,7 +179,7 @@ namespace CustomListTest
 
         }
 
-        // shifting
+        [TestMethod] 
         public void Remove_CheckForIndex1ShiftingToIndex0()
         {
             //Arrange

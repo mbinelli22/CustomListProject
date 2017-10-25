@@ -6,11 +6,16 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication2
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            List<string> foo = new List<string>();
+            
+            CustomList<int> customList = new CustomList<int>();
+
+            customList.Add(5);
+            customList.Add(6);
+            customList.Remove(5);
         }
     }
 }

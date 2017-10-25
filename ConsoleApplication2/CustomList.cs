@@ -79,19 +79,24 @@ namespace ConsoleApplication2
 
         public bool Remove(T value)
         {
+            
+            T[] tempData = new T[capacity];
+            bool ValueMatch = false;
             for (int i = 0; i <= Count; i++)
             {
-                if (data[i].Equals(value) )//array has value im looking for return true, have other values slide down
-                {
-                    
 
-                    return true;
+                if (data[i].Equals(value) )
+                {
+                    Count--;
+                    ValueMatch = true;                
                 }
                 else
                 {
-                    return false;
+                    tempData[i] = data[i];
                 }
             }
+            data = tempData;
+            return ValueMatch;
         }
 
 
