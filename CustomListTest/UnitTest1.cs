@@ -117,8 +117,8 @@ namespace CustomListTest
             int expectedValue = 0;
 
             //Act
-            customList.Add("yoda");
-            customList.Remove("yoda");
+            customList.Add("Yoda");
+            customList.Remove("Yoda");
             int actualValue = customList.Count;
 
             //Assert
@@ -146,13 +146,12 @@ namespace CustomListTest
         {
             //Arrange
             CustomList<int> customList = new CustomList<int>();
-            int expectedValue = 0;
+            int expectedValue = 1;
 
 
             //Act
             customList.Add(8);
             customList.Add(2);
-            customList.Remove(8);
             customList.Remove(2);
             int actualValue = customList.Count;
 
@@ -174,6 +173,24 @@ namespace CustomListTest
 
             //Assert
             Assert.AreEqual(actualValue, expectedValue);
+
+        }
+
+        // shifting
+        public void Remove_CheckForIndex1ShiftingToIndex0()
+        {
+            //Arrange
+            CustomList<int> customList = new CustomList<int>();
+            int expectedValue = 2;
+
+            //Act
+            customList.Add(8);
+            customList.Add(2);
+            customList.Remove(8);
+            int actualValue = customList[0];
+
+            //Assert
+            Assert.AreEqual(expectedValue, actualValue);
 
         }
     }

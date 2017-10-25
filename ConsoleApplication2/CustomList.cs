@@ -31,7 +31,7 @@ namespace ConsoleApplication2
             set { data[i] = value; }
         }
 
-        public MyList()
+        public void MyList()
         {
             data = new T[Count];
         }
@@ -77,17 +77,19 @@ namespace ConsoleApplication2
             capacity *= 2;            
         }
 
-        public void Remove(T value)
+        public bool Remove(T value)
         {
-            for ()
+            for (int i = 0; i <= Count; i++)
             {
-                if ()//array has value im looking for return true, have other values slide down
+                if (data[i].Equals(value) )//array has value im looking for return true, have other values slide down
                 {
+                    
 
+                    return true;
                 }
                 else
                 {
-                    //return false
+                    return false;
                 }
             }
         }
@@ -100,6 +102,6 @@ namespace ConsoleApplication2
 
 
 
-    }
+}
 }
 
