@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication2
 {
-    public class CustomList<T>
+    public class CustomList<T> : IEnumerable
     {
         //member variables
 
@@ -35,6 +36,14 @@ namespace ConsoleApplication2
         {
             data = new T[Count];
         }
+
+        public IEnumerator GetEnumerator()
+        {
+            return data.GetEnumerator();
+        }
+
+
+
 
         public void Add(T value)
         {
@@ -99,14 +108,24 @@ namespace ConsoleApplication2
             return ValueMatch;
         }
 
+        public ToString(T value)
+        {
+            //convert the contents of the custom list to a string
+            //make a new array that holds strings and transfer
+            //    T[] tempData = new T[capacity];
+            //    for (int i = 0; i <= Count; i++)
+            //    {
+            //        tempData[i] = data[i];
+            //    }
+        }
 
 
+        public void Zipper()
+        {
+
+        }
 
 
-
-
-
-
-}
+    }
 }
 
