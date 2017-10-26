@@ -247,24 +247,117 @@ namespace CustomListTest
 
             //Assert
             Assert.AreEqual(expectedValue, customList[1]);
-            
+
         }
-         
-        
+
+        //OVERRIDE TOSTRING<><><><><><><><><><><><><><><>><><><><><>
+
+
+        [TestMethod]
+        public void OverloadToString()
+        {
+            //Arrange
+
+            //Act
+            
+            //Assert
+
+        }
+
+
         //ZIPPER<><><><><><><><><><><><><><><><><><><><><><><><><>
 
         [TestMethod]
         public void Zipper_ZipTwoListsTogether_Int()
         {
             //Arrange
+            CustomList<int> customList = new CustomList<int>();
             CustomList<int> odd = new CustomList<int>() { 1, 3, 5 };
             CustomList<int> even = new CustomList<int>() { 2, 4, 6 };
+            int firstIndex = odd[0];
+            int secondIndex = even[0];
+
+            //Act
+            customList = odd.Zipper(even);
+            int expectedValue = 2;
+
+
+            //Assert
+            Assert.AreEqual(expectedValue, customList[1]);
+
+        }
+
+        [TestMethod]
+        public void Zipper_ZipTwoListsTogether_String()
+        {
+            //Arrange
+            CustomList<string> customList = new CustomList<string>();
+            CustomList<string> good = new CustomList<string>() { "Yoda", "Yoda", "Yoda" };
+            CustomList<string> evil = new CustomList<string>() { "Vader", "Vader", "Vader" };
+            string firstIndex = good[0];
+            string secondIndex = evil[0];
+
+            //Act
+            customList = good.Zipper(evil);
+            string expectedValue = "Vader";
+
+            //Assert
+            Assert.AreEqual(expectedValue, customList[1]);
+
+        }
+
+        [TestMethod]
+        public void Zipper_ZipTwoListsTogether_Bool()
+        {
+            //Arrange
+            CustomList<bool> customList = new CustomList<bool>();
+            CustomList<bool> boolTrue = new CustomList<bool>() { true, true, true };
+            CustomList<bool> boolFalse = new CustomList<bool>() { false, false, false };
+            bool firstIndex = boolTrue[0];
+            bool secondIndex = boolFalse[0];
+
+            //Act
+            customList = boolTrue.Zipper(boolFalse);
+            bool expectedValue = false;
+
+            //Assert
+            Assert.AreEqual(expectedValue, customList[1]);
+
+        }
+
+        //OVERRIDE<><><><><><><><><><><><><><><><><><><><><><><><><>
+
+        [TestMethod]
+        public void OverloadAdd_AddTwoInstancesTogether()
+        {
+            //Arrange
 
             //Act
 
             //Assert
 
         }
+
+        [TestMethod]
+        public void OverloadRemove_RemoveOneInstanceFromAnotherInstance()
+        {
+            //Arrange
+
+            //Act
+
+            //Assert
+
+        }
+
+
+
+
+
+
+
+
+
+
 
     }
 }

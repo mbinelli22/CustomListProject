@@ -112,15 +112,29 @@ namespace ConsoleApplication2
         {
             //convert the contents of the custom list to a string
             //make a new array that holds strings and transfer
-            //    T[] tempData = new T[capacity];
-            //    for (int i = 0; i <= Count; i++)
-            //    {
-            //        tempData[i] = data[i];
-            //    }
+            T[] tempData = new T[capacity];
+            for (int i = 0; i <= Count; i++)
+            {
+                tempData[i] = data[i];
+            }
         }
 
 
-        public void Zipper()
+        public IEnumerator Zipper(T value)
+        {
+            for (int i = 0; i <= Count; i++)
+            {
+
+            }
+
+        }
+
+        public void OverloadAdd()
+        {
+
+        }
+
+        public void OverloadRemove()
         {
 
         }
